@@ -28,7 +28,6 @@ function calculate(){
    result.classList.add('error')
    result.value = eval(input.value)
    result.classList.remove('error')
-   input.focus()
 }
 
 //Adiciona elementos a partir do clique no display
@@ -41,7 +40,6 @@ document.querySelectorAll('.charKeys').forEach(function(charKey){
 //Limpar os elementos do input
 document.getElementById('clear').addEventListener('click', function(){
    input.value = ''
-   input.focus()
 })
 
 //Copiar o resultado para a área de tranferência
@@ -77,6 +75,8 @@ document.getElementById('themeSwitcher').addEventListener('click', function(){
       root.style.setProperty('--border-color', '#4a4a4a')
       root.style.setProperty('--keys-color', '#222222')
       root.style.setProperty('--shadow-copy-color', '#fb4c2dad')
+      input.style.backgroundColor = '#1a1a1a'
+      result.style.backgroundColor = '#1a1a1a'
       main.dataset.theme = 'dark'
    }
 })
