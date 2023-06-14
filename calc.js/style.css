@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,200&display=swap');
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+:root{
+   --bg-color:#1a1a1a;
+   --accent-color:#fb4c2d;
+   --font-color:#fff;
+   --border-color:#4a4a4a;
+   --keys-color:#222222;
+}
+
+body{
+   background-color: var(--bg-color);
+   color: var(--font-color);
+   font-family: 'Kanit', sans-serif;
+}
+
+main{
+   display: block;
+   max-width: 40rem;
+   margin: 0 auto;
+   padding: 0 1.5rem 2.5rem;
+   position: relative;
+}
+
+header{
+   padding: 1.5rem 0;
+}
+
+#themeSwitcher{
+   background-color: var(--bg-color);
+   border: .17rem solid var(--font-color);
+   color: var(--font-color);
+}
+#themeSwitcher:hover{
+   color: var(--bg-color);
+   background-color: #fff;
+   cursor: pointer;
+}
+
+button {
+   background-color: var(--keys-color);
+   border: none;
+   border-radius: .25rem;
+   font-weight: 700;
+   padding: .5rem 1rem;
+   border: .17rem solid var(--accent-color);
+   transition: .2s;
+   color: var(--font-color);
+ }
+
+input{
+   width: 100%;
+   color: var(--font-color);
+   background-color: var(--bg-color);
+   border: .17rem solid var(--border-color);
+   border-radius: .45rem;
+   padding: 1rem;
+   display: block;
+   text-align: end;
+   font-size: 1.6rem;
+   margin: 0 auto;
+}
+
+#keys{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 1rem;
+   margin: 2rem 0;
+}
+#keys button{
+   color: var(--font-color);
+   font-size: 1.5rem;
+}
+#keys button:hover{
+   background-color: var(--accent-color);
+   
+   cursor: pointer;
+   padding: 0;
+   transition: .3s;
+}
+#equal{
+   background-color: var(--accent-color);
+}
+#equal button:hover{
+   background-color: var(--border-color);
+}
+
+#copy{
+   background-color: var(--bg-color);
+   border: .17rem solid var(--border-color);
+   border-radius: .5rem 0 0 .5rem;
+   height: 4.15rem;
+   width: 6rem;
+   display: block;
+}
+
+#result{
+   border-radius: 0 .5rem .5rem 0;
+}
+
+.flex{
+   display: flex;
+   align-items: center;
+}
+.justify-between{
+   justify-content: space-between;
+}
+.align-items{
+   align-items: center;
+}
+
+.error {
+   background-color: var(--error-color);
+ }
+ 
+.success {
+   border-color: var(--primary-color) !important;
+   color: var(--primary-color) !important;
+ }
