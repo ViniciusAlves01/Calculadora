@@ -5,35 +5,36 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Calculadora</title>
    <link rel="stylesheet" href="style.css">
+   <script src="calc.js" defer></script>
 </head>
 <body>
-   <main>
+   <main data-theme="dark">
       <header class="flex justify-between align-items">
          <h1>Calc.js</h1>
          <button id="themeSwitcher">Trocar tema claro/escuro</button>
       </header>
-      <input type="text">
+      <input type="text" id="input" autocomplete="off" >
       <div id="keys">
          <button id="clear">C</button>
-         <button data-value="(">(</button>
-         <button data-value=")">)</button>
-         <button data-value="/">/</button>
-         <button data-value="7">7</button>
-         <button data-value="8">8</button>
-         <button data-value="9">9</button>
-         <button data-value="*">*</button>
-         <button data-value="4">4</button>
-         <button data-value="5">5</button>
-         <button data-value="6">6</button>
-         <button data-value="-">-</button>
-         <button data-value="1">1</button>
-         <button data-value="2">2</button>
-         <button data-value="3">3</button>
-         <button data-value="+">+</button>
-         <button data-value="0">0</button>
-         <button data-value=".">.</button>
-         <button data-value="mod">mod</button>
-         <button id="equal">=</button>
+         <button class="charKeys" data-value=" ( ">(</button>
+         <button class="charKeys" data-value=" ) ">)</button>
+         <button class="charKeys" data-value=" / ">/</button>
+         <button class="charKeys" data-value="7">7</button>
+         <button class="charKeys" data-value="8">8</button>
+         <button class="charKeys" data-value="9">9</button>
+         <button class="charKeys" data-value=" * ">*</button>
+         <button class="charKeys" data-value="4">4</button>
+         <button class="charKeys" data-value="5">5</button>
+         <button class="charKeys" data-value="6">6</button>
+         <button class="charKeys" data-value=" - ">-</button>
+         <button class="charKeys" data-value="1">1</button>
+         <button class="charKeys" data-value="2">2</button>
+         <button class="charKeys" data-value="3">3</button>
+         <button class="charKeys" data-value=" + ">+</button>
+         <button class="charKeys" data-value="0">0</button>
+         <button class="charKeys" data-value=".">.</button>
+         <button class="charKeys" data-value="%">mod</button>
+         <button id="eval">=</button>
       </div>
       <section class="flex justify-between align-items">
          <button id="copy">Copiar</button>

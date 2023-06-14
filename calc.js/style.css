@@ -12,6 +12,8 @@
    --font-color:#fff;
    --border-color:#4a4a4a;
    --keys-color:#222222;
+   --shadow-copy-color: #fb4c2dad;
+   color: #fff9f1;
 }
 
 body{
@@ -36,11 +38,13 @@ header{
    background-color: var(--bg-color);
    border: .17rem solid var(--font-color);
    color: var(--font-color);
+   font-weight: 700;
+   font-style: italic;
+   cursor: pointer;
 }
 #themeSwitcher:hover{
    color: var(--bg-color);
-   background-color: #fff;
-   cursor: pointer;
+   background-color: var(--font-color);
 }
 
 button {
@@ -52,6 +56,7 @@ button {
    border: .17rem solid var(--accent-color);
    transition: .2s;
    color: var(--font-color);
+   cursor: pointer;
  }
 
 input{
@@ -65,6 +70,10 @@ input{
    text-align: end;
    font-size: 1.6rem;
    margin: 0 auto;
+   cursor: text;
+}
+input:focus{
+   border: .17rem solid var(--bg-color);
 }
 
 #keys{
@@ -79,16 +88,15 @@ input{
 }
 #keys button:hover{
    background-color: var(--accent-color);
-   
-   cursor: pointer;
    padding: 0;
    transition: .3s;
 }
-#equal{
+#eval{
    background-color: var(--accent-color);
 }
-#equal button:hover{
-   background-color: var(--border-color);
+#eval:hover{
+   box-shadow: 0px 0px 10px var(--accent-color);
+   filter: brightness(1.05);
 }
 
 #copy{
@@ -116,10 +124,11 @@ input{
 }
 
 .error {
-   background-color: var(--error-color);
+   background-color: var(--accent-color);
  }
  
-.success {
-   border-color: var(--primary-color) !important;
-   color: var(--primary-color) !important;
+.copySuccess{
+   border-color: var(--accent-color) !important;
+   color: var(--font-color) !important;
+   box-shadow: 0px 0px 10px var(--shadow-copy-color);
  }
